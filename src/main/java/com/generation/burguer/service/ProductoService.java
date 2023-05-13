@@ -4,9 +4,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.generation.burguer.model.Producto;
-import com.generation.burguer.model.Producto;
 import com.generation.burguer.repository.ProductoRepository;
-import com.generation.burguer.repository.ProductoRepository;
+
 
 @Service
 public class ProductoService {
@@ -29,12 +28,12 @@ public class ProductoService {
 	}
 
 	public Producto deleteProducto(Long id) {
-		Producto userTmp = null;
+		Producto prodTmp = null;
 		if(productoRepository.existsById(id)) {
-			userTmp=productoRepository.findById(id).get();
+			prodTmp=productoRepository.findById(id).get();
 			productoRepository.deleteById(id);
 		}
-		return userTmp;
+		return prodTmp;
 	}
 public Producto addProducto(Producto producto) {
 	Producto tmp =null;
@@ -47,8 +46,10 @@ public Producto updateProducto(Long id, Producto producto) {
     Producto tmpPro = null;
     if(productoRepository.existsById(id)) {
         tmpPro = productoRepository.findById(id).get();
-            if(producto.getName() != null) tmpPro.setName(producto.getName());
-            if(producto.getEmail() != null) tmpPro.setEmail(producto.getEmail());
+            if(producto.getNombre() != null) tmpPro.setNombre(producto.getNombre());
+            if(producto.getDescripcion() != null) tmpPro.setDescripcion(producto.getDescripcion());
+            if(producto.getImagen() != null) tmpPro.setImagen(producto.getImagen());
+            if (producto.getPrecio() != 0.0) tmpPro.setPrecio(producto.getPrecio());//Se pone 0.0 porque al ser Double marcaba error con 1=null
         
             productoRepository.save(tmpPro);
         }else {

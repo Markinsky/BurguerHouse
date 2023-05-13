@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.burguer.model.Producto;
+import com.generation.burguer.model.dtoProducto;
 import com.generation.burguer.service.ProductoService;
 
 @RestController
@@ -25,7 +26,7 @@ public class ProductoController {
     }
 
     @GetMapping
-    public List<dto producto> getProductos(){
+    public List<dtoProducto> getProductos(){
         return productoService.getAllProductos();
     }
 
