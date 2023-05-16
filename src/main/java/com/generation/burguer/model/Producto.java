@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 	@Entity
@@ -26,18 +28,34 @@ import javax.persistence.Table;
 		 
 		 @Column(name = "prod_img", nullable = false)
 		 private String imagen;
+		 
+		 @ManyToOne
+		    @JoinColumn(name = "cate_id")
+		    private Categoria Categoria;
 
-		public Producto(Long id, String nombre, String descripcion, double precio, String imagen) {
+		
+		 
+public Producto(Long id, String nombre, String descripcion, double precio, String imagen,
+				com.generation.burguer.model.Categoria categoria) {
 			super();
 			this.id = id;
 			this.nombre = nombre;
 			this.descripcion = descripcion;
 			this.precio = precio;
 			this.imagen = imagen;
+			Categoria = categoria;
 		}
-		 
+
 public Producto() {
 	// TODO Auto-generated constructor stub
+}
+
+public Categoria getCategoria() {
+	return Categoria;
+}
+
+public void setCategoria(Categoria categoria) {
+	Categoria = categoria;
 }
 
 public Long getId() {

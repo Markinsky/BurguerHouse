@@ -1,5 +1,6 @@
 package com.generation.burguer.controller;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,12 +27,12 @@ public class ProductoController {
     }
 
     @GetMapping
-    public List<dtoProducto> getProductos(){
+    public Optional<dtoProducto> getProductos(){
         return productoService.getAllProductos();
     }
 
     @GetMapping (path="{userId}")
-    public Producto getProducto(@PathVariable("userId") Long id) {
+    public dtoProducto getProducto(@PathVariable("userId") Long id) {
         return productoService.getProducto(id);
     }
 
@@ -48,8 +49,8 @@ public class ProductoController {
     //Data Transfer Object - DTO
     @PutMapping(path="{userId}")
     public Producto updateProducto(@PathVariable("userId") Long id,
-                                @RequestBody ChangePassword changePassword) {
-        return productoService.updateProducto(id, changePassword);
+                                @RequestBody Producto producto) {
+        return productoService.updateProducto(id, producto);
     }
 
 

@@ -1,9 +1,12 @@
 package com.generation.burguer.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.generation.burguer.model.Producto;
+import com.generation.burguer.model.dtoProducto;
 import com.generation.burguer.repository.ProductoRepository;
 
 
@@ -15,13 +18,13 @@ public class ProductoService {
 		super();
 		this.productoRepository = productoRepository;
 	}
-	public List<Producto> getAllProductos() {
+	public Optional<dtoProducto> getAllProductos() {
 		
-		return productoRepository.findAll();
+		return productoRepository.findByTables();
 	}
 
-	public Producto getProducto(Long id) {
-		return productoRepository.findById(id).orElseThrow(
+	public dtoProducto getProducto(Long id) {
+		return productoRepository.findByData(id).orElseThrow(
 				()-> new IllegalArgumentException("Producto con id "
 							+ id + "no existe.")
 				);
@@ -50,7 +53,7 @@ public Producto updateProducto(Long id, Producto producto) {
             if(producto.getDescripcion() != null) tmpPro.setDescripcion(producto.getDescripcion());
             if(producto.getImagen() != null) tmpPro.setImagen(producto.getImagen());
             if (producto.getPrecio() != 0.0) tmpPro.setPrecio(producto.getPrecio());//Se pone 0.0 porque al ser Double marcaba error con 1=null
-        
+            if(producto.getCategoria() != null) tmpPro.setCategoria(producto.getCategoria());
             productoRepository.save(tmpPro);
         }else {
             System.out.println("El producto con el id: " + id + " No existe");

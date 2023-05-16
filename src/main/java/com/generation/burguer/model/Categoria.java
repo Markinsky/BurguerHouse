@@ -1,10 +1,15 @@
 package com.generation.burguer.model;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,15 +23,34 @@ public class Categoria {
 		
 		 @Column(name = "cate_nombre", nullable = false)
 		 private String nombre;
+		
+		 @OneToMany
+		    @JoinColumn(name = "prod_id")
+		    private List<Producto> producto;
+		
 
-		public Categoria(Long id, String nombre) {
+
+public Categoria(Long id, String nombre, List<Producto> producto) {
 			super();
 			this.id = id;
 			this.nombre = nombre;
+			this.producto = producto;
 		}
+
 public Categoria() {
 	// TODO Auto-generated constructor stub
 }
+
+
+
+public List<Producto> getProducto() {
+	return producto;
+}
+
+public void setProducto(List<Producto> producto) {
+	this.producto = producto;
+}
+
 public Long getId() {
 	return id;
 }
