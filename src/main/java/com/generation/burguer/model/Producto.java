@@ -30,11 +30,9 @@ import javax.persistence.Table;
 		 private String imagen;
 		 
 		 @ManyToOne
-		    @JoinColumn(name = "cate_id")
+		    @JoinColumn(name = "cate_id", nullable = false)
 		    private Categoria Categoria;
 
-		
-		 
 public Producto(Long id, String nombre, String descripcion, double precio, String imagen,
 				com.generation.burguer.model.Categoria categoria) {
 			super();

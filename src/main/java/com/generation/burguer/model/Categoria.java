@@ -25,7 +25,7 @@ public class Categoria {
 		 private String nombre;
 		
 		 @OneToMany
-		    @JoinColumn(name = "prod_id")
+		    @JoinColumn(name = "cate_id")
 		    private List<Producto> producto;
 		
 
