@@ -16,7 +16,7 @@ import com.generation.burguer.model.Usuario;
 import com.generation.burguer.service.UsuarioService;
 
 @RestController
-@RequestMapping(path="/api/usuario/")
+@RequestMapping(path="/api/")
 public class UsuarioController {
 	private final UsuarioService usuarioService;
 
@@ -33,13 +33,6 @@ public class UsuarioController {
     @GetMapping (path="{userId}")
     public Usuario getUsuario(@PathVariable("userId") Long id) {
         return usuarioService.getUsuario(id);
-    }
-    
-    @PostMapping (path = "{userEmail}/{userPass}/")
-    public Usuario getUsuario(@PathVariable("userEmail") String email, 
-    							@PathVariable("userPass") String pass) {
-    	System.out.println("Email: "+ email + " Contra: " + pass);
-    	return usuarioService.getLogin(email,pass);
     }
 
     @DeleteMapping (path="{userId}")

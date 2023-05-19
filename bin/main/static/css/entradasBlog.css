@@ -1,0 +1,102 @@
+/* parte responsiva */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  background-image: url(/src/imgfondos/fondococina.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #135b11;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Fredoka";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imgBlog {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  width: 50%;
+  height: 60%;
+  border-radius: 25px;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.257);
+}
+
+.blog-text {
+  max-width: 700px;
+  background-color: #272a33;
+  border-radius: 25px;
+  margin: auto;
+  padding: 1em;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.187);
+}
+
+@media screen and (max-width: 768px) {
+  .blog-content {
+    display: block;
+  }
+
+  .imgBlog {
+    /* float: none;
+    margin: auto; */
+    display: block;
+    width: -webkit-fill-available;
+    margin: 2rem;
+  }
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Handlee";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.txtEntradasBlog{
+  font-size: 20px;
+  font-family: "Lato";
+  color: #ffffff;
+  text-align: justify;
+}

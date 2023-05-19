@@ -15,7 +15,7 @@ import com.generation.burguer.model.dtoProducto;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	Optional <Usuario> findByEmail(String email);
 	
-	@Query ("SELECT email, name, password, phone, type FROM Usuario WHERE email = :Email AND password = :Pass")
-	Optional <Usuario> findByLogin (@Param("Email") String Email,
-    		@Param("Pass") String Pass);
+	@Query ("SELECT u FROM Usuario u WHERE u.email = :Email AND u.password = :Pass")
+    Usuario findByLogin (@Param("Email") String Email,
+            @Param("Pass") String Pass);
 }

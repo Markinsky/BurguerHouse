@@ -3,9 +3,14 @@ package com.generation.burguer.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.generation.burguer.model.LoginRequest;
 import com.generation.burguer.model.Usuario;
 import com.generation.burguer.repository.UsuarioRepository;
 
@@ -59,13 +64,21 @@ public class UsuarioService {
 	        return tmpPro;
 	    }
 	
-	public Usuario getLogin(String email, String pass) {
-		return usuarioRepository.findByLogin(email,pass).orElseThrow(
-				()-> new IllegalArgumentException("Usuario con el email "
-							+ email + "no existe.")
-				);
-	}
-	
+	public Boolean getLogin(LoginRequest loginRequest) {
+        return existsByEmail(loginRequest.getEmail(),loginRequest.getPass());
+    }
+
+      @PersistenceContext
+        private EntityManager entityManager;
+
+
+  public boolean existsByEmail(String email, String pass) {
+      String jpql = "SELECT COUNT(u) > 0 FROM Usuario u WHERE u.email = :Email AND u.password = :Pass";
+      TypedQuery<Boolean> query = entityManager.createQuery(jpql, Boolean.class);
+      query.setParameter("Email", email );
+      query.setParameter("Pass", pass );
+      return query.getSingleResult();
+  }
 	}
 
 

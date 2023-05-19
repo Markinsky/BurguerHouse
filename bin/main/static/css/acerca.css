@@ -1,0 +1,235 @@
+body {
+  background-image: url(/src/imgfondos/fondococina.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.tituloAcercaD {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #135b11;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Fredoka";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+}
+
+.imgAcerca {
+  display: block;
+  margin: 0 auto;
+}
+
+.imgAcercaCocinero {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  margin: 8%;
+  margin-top: -8em;
+}
+
+.pAcerca {
+  color: #ffff;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: justify;
+  padding: 0 3%;
+  position: relative;
+  bottom: 1rem;
+  line-height: 1.5;
+}
+
+.hAcerca {
+  font-family: "Fredoka";
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fcc875;
+}
+.card-body {
+  background-color: #272932;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  height: 90%;
+  opacity: 0.94;
+}
+
+.acercaConten {
+  margin: 5%;
+}
+
+.card-body:hover {
+  transform: scale(1.01, 1.01);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+/*our chef style*/
+
+.our-team{
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+}
+
+.heading{
+    text-align: center;
+    color:#135B11;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+.sub-heading{
+  text-align: center;
+  color: #fcc875;
+  font-size: 1.9rem;
+  padding: 1rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  background: #272932;
+  display: inline-block;
+}
+
+.our-chef{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.our-chef .item .image img{
+  height: 90%;
+  width: 80%;
+  margin-left: 10%;
+  transition: filter 0.25s;
+}
+
+.our-chef .item:hover .image img {
+  filter: brightness(50%); 
+}
+
+.our-chef .item{
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.our-chef .item:before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;left: 0;right: 0;bottom: 0;
+  z-index: 6;
+}
+
+.our-chef .item:hover .item:before{
+  display: block;
+}
+
+.our-chef .item .chef-info{
+  position: absolute;
+  top: 100%;
+  left: 0;right: 0;bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  align-items: center;
+  transition: top 0.5s,opacity 0.5s;
+  opacity: 0;
+  cursor: pointer; 
+}
+
+.our-chef .item .chef-info h3{
+  font-size: 1.7rem;
+  color: #ffff;
+  padding: .8rem 0;
+  text-transform: uppercase;
+}
+
+.our-chef .item .chef-info span{
+  font-size: 1.7rem;
+  color: #fcc875;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-left: 17%;
+}
+
+.our-chef .item .chef-info ul{
+  list-style: none;
+  display: flex;
+  grid-gap: 2rem;
+  padding: 3rem 0;
+}
+
+.our-chef .item .chef-info ul li a{
+  color: #fcc875;
+  font-size: 1.8rem;
+  margin-left: 290%;
+}
+
+.our-chef .item:hover .chef-info{
+  top: 0;
+  opacity: 1; 
+}
+
+
+@media screen {
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .imgAcercaCocinero {
+    margin-top: -1em;
+  }
+
+  .our-chef {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+  }
+
+  .our-chef .item .chef-info h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .our-chef .item .chef-info span{
+    font-size: 1.7rem;
+  }
+  
+  
+  .our-chef .item .chef-info ul li a{
+    color: #fcc875;
+    font-size: 1.8rem;
+  }
+
+  .pAcerca {
+    color: #ffff;
+    font-size: 15px;
+    
+  }
+  
+  .hAcerca {
+    font-family: "Fredoka";
+    font-size: 30px;
+  }
+}
