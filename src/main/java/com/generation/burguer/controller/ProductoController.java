@@ -27,7 +27,7 @@ public class ProductoController {
     }
 
     @GetMapping
-    public Optional<dtoProducto> getProductos(){
+    public List<dtoProducto> getProductos(){
         return productoService.getAllProductos();
     }
 
@@ -52,6 +52,7 @@ public class ProductoController {
                                 @RequestBody Producto producto) {
         return productoService.updateProducto(id, producto);
     }
+  
 
 
 

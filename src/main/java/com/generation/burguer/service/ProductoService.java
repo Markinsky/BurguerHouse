@@ -18,7 +18,7 @@ public class ProductoService {
 		super();
 		this.productoRepository = productoRepository;
 	}
-	public Optional<dtoProducto> getAllProductos() {
+	public List<dtoProducto> getAllProductos() {
 		
 		return productoRepository.findByTables();
 	}
@@ -38,13 +38,14 @@ public class ProductoService {
 		}
 		return prodTmp;
 	}
+	
 public Producto addProducto(Producto producto) {
 	Producto tmp =null;
-	if(productoRepository.findByNombre(producto.getNombre()).isEmpty()){
+	System.out.println(producto+"PRODUCTO");
 		tmp = productoRepository.save(producto);
-	}//if
-		return tmp;
+		return producto;
 		}
+
 public Producto updateProducto(Long id, Producto producto) {
     Producto tmpPro = null;
     if(productoRepository.existsById(id)) {

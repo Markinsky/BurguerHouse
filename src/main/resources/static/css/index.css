@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ***************** */
+/* SECCION I N I C I O */
+/* ***************** */
+#inicio{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+/* Carrusel */ 
+ #inicio .carrusel{
+    position: relative;
+    height: 100%;
+}
+
+#inicio .gallery {
+    width: 100%;
+    height: 100%;
+}
+  
+#inicio .gallery-cell {
+    margin-right: 10px;
+    height: auto;
+}
+#inicio .gallery-cell img{
+    display: block;
+    width: 100vw;
+    height:auto;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.desvideo{
+    margin-left: 5%;
+    display: inline-block;
+    width: 100%;
+}
+
+  .desvideo h2{
+    color: #135B11;
+    font-family: "Fredoka";
+    font-size: 2.5em;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    
+  }
+
+  .desvideo p{
+    color: #272932;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.5;
+    width: 100%;
+    font-family: "Lato";  
+  }
+
+  .desvideo span{
+    color:  #FCC875;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.5;
+    width: 100%;
+    font-family: "Fredoka";
+    
+  }
+
+  /* Cards pilares restaurante */
+  
+  .welcome{
+    padding: 4rem 2%;
+  }
+
+  .heading{
+    text-align: center;
+    color:#135B11;
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+  }
+
+  .sub-heading{
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: .5rem 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    background: #272932;
+    display: inline-block;
+  }
+
+  .welcome .box-container{
+    display: flex;
+    gap: 1.5 rem;
+  }
+
+  .welcome .box-container .box{
+    width: 33%;
+    background: #272932;
+    text-align: center;
+    margin: 1.5%;
+  }
+
+  .welcome .box-container .box .image{
+    height: 17rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+.welcome .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.welcome .box-container .box .image:hover img{
+  transform: scale(1.1);
+}
+
+.welcome .box-container .box .content{
+  padding: 1.5rem;
+  padding-top: 2rem;
+}
+.welcome .box-container .box .content h3{
+  color: #FCC875;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.welcome .box-container .box .content p{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: .5rem 0;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: "Lato";
+}
+
+  @media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    .desvideo {
+        max-width: 88%;
+      }
+
+    .desvideo h2{
+        font-size: 2em;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .desvideo p{
+        font-size: 1em;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .welcome .box-container{
+      flex-wrap: wrap;
+    }
+
+    .welcome .box-container .box{
+      width: 100%;
+    }
+
+    .welcome .box-container .box .content h3{
+      font-size: 2em;
+      max-width: 100%;
+      line-height: 1.2;
+    }
+    
+    .welcome .box-container .box .content p{
+      font-size: 1em;
+      line-height: 1.5;
+      max-width: 100%;
+    }
+}
+
+
+  
+ 

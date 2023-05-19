@@ -1,0 +1,139 @@
+.tituloSucursales {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #135b11;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Fredoka";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 1rem;
+  -webkit-text-stroke: 1.5px #272932;
+}
+
+.containerCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+  gap: 10rem;
+  background-color: #e7ecef;
+  padding: 14rem;
+  border-radius: 25px;
+  margin: 8rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fill-available;
+  margin-top: -8rem;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
+}
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+.card-header {
+  height: 200px;
+  width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+#colorAmarillo {
+  background-color: #fcc875;
+}
+#colorVerde {
+  background-color: #272932;
+  color: #fcc875;
+}
+.bodycard {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 2em;
+}
+
+iframe {
+  width: -webkit-fill-available;
+  height: 19rem;
+  transform: translateX(0rem);
+  border-radius: 25px;
+}
+
+.imgScursales {
+  width: 100%;
+  border-radius: 25px;
+  margin: inherit;
+  display: grid;
+}
+@media screen and (max-width: 425px) {
+  .containerCards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  .card {
+    width: initial;
+  }
+
+  iframe {
+    width: -webkit-fill-available;
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .containerCards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .card {
+    width: -webkit-fill-available;
+    margin-top: auto;
+  }
+
+  iframe {
+    width: -webkit-fill-available;
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 124px) {
+  .containerCards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  .card {
+    width: initial;
+  }
+
+  iframe {
+    width: -webkit-fill-available;
+    height: 16rem;
+  }
+}
+
+/* .imgScursales {
+  width: -webkit-fill-available;
+  border-radius: 25px;
+  margin: inherit;
+  display: grid;
+  height: unset;
+} */

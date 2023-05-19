@@ -34,6 +34,13 @@ public class UsuarioController {
     public Usuario getUsuario(@PathVariable("userId") Long id) {
         return usuarioService.getUsuario(id);
     }
+    
+    @PostMapping (path = "{userEmail}/{userPass}/")
+    public Usuario getUsuario(@PathVariable("userEmail") String email, 
+    							@PathVariable("userPass") String pass) {
+    	System.out.println("Email: "+ email + " Contra: " + pass);
+    	return usuarioService.getLogin(email,pass);
+    }
 
     @DeleteMapping (path="{userId}")
     public Usuario deleteUsuario(@PathVariable("userId") Long id) {

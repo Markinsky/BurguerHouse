@@ -1,6 +1,7 @@
 package com.generation.burguer.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -57,6 +58,13 @@ public class UsuarioService {
 	            }
 	        return tmpPro;
 	    }
+	
+	public Usuario getLogin(String email, String pass) {
+		return usuarioRepository.findByLogin(email,pass).orElseThrow(
+				()-> new IllegalArgumentException("Usuario con el email "
+							+ email + "no existe.")
+				);
+	}
 	
 	}
 

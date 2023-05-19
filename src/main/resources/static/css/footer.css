@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+footer{
+  background-color: #272932 !important;  
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.subtfooter{
+  color: #FCC875 !important;
+  font-size: 19px;
+}
+
+
+a:hover{
+  color:#FCC875 !important;
+}
+
+.imagenPrincipalFooter{
+  width: 270px;
+  height: 270px;
+}
+
+
+.iconoRedes{
+  width: 35px;
+  height: auto;
+}
+
+.historiafooter{
+text-align: justify;
+}
+
+p span{
+  color: #FCC875;
+
+}
+
+.textfoot{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
