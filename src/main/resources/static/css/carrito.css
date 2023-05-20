@@ -1,326 +1,322 @@
 body {
-    /*Estilo del cuerpo */
-    background: #fff;
-  }
-
-  .tituloLogin {
-    /*Estilo del titulo "Contacto"*/
-    margin: 0 0 30px;
-    padding: 0;
-    color: #135B11;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Fredoka';
-    font-style: bold;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 77px;
-    text-align: center;
-    -webkit-text-stroke: 1.5px #272932;
-  }
-
-  .login-box {
-    /*Caja del formato  */
-    width: 100%;
-    padding: 40px;
-    background: #272932;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-    border-radius: 10px;
-  }
-
-  .login-box .user-box {
-    position: relative;
-  }
-  
-  .login-box .user-box input {
-    /*Estilo del texto dentro del formulario(Datos a llenar) */
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 3px solid #FCC875;
-    outline: none;
-    background: transparent;
-    font-family: 'Handlee';
-    letter-spacing: 0em;
-  
-  
-  }
-
-  .login-box .user-box label {
-    /*Estilo del texto que aparece en el formulario(Nombre,correo,numero) */
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
-  
-    font-family: 'Handlee';
-    letter-spacing: 0em;
-    text-align: center;
-  
-  }
-  
-  .login-box .user-box input:focus~label,
-  .login-box .user-box input:valid~label {
-    /*Estilo del texto que se hace pequeño */
-    top: -20px;
-    left: 0;
-    color: #FCC875;
-    font-size: 12px;
-    font-family: 'Handlee';
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  
-  .login-box a {
-    /*Estilo del boton  */
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #FCC875;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 10px;
-    letter-spacing: 4px;
-    font-family: 'Handlee';
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  
-  /*Palabra que contiene el botón*/
-  .login-box a span {
-    position: absolute;
-    display: block;
-  }
-  
-  /*A partir de aquí se anima el botón con la línea*/
-  .login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #FCC875);
-    animation: btn-anim1 1s linear infinite;
-  }
-  
-  /*Lista de errores que muestra el alert al enviar formulario*/
-  .listaDeErrores {
-    list-style-type: none;
-  }
-
-  /*Botón del alert insertado con sweet alert2*/
-.swal2-styled.swal2-confirm {
-    border-radius: .25em;
-    background: initial;
-    background-color: #FCC875 !important;
-    color: #fff;
-    font-size: 1em;
-  }
-  
-  /*Título del botón del alert insertado con sweet alert2*/
-  #swal2-title {
-    position: relative;
-    max-width: 100%;
-    margin: 0;
-    padding: .8em 1em 0;
-    color: inherit;
-    font-size: 1.875em;
-    font-family: 'Handlee' !important;
-    font-weight: 600;
-    text-align: center;
-    text-transform: none;
-    word-wrap: break-word;
-  }
-
-  .h2Texto {
-    /*Estilo del texto "H2 "*/
-    margin: 0 0 30px;
-    padding: 0;
-    color: white;
-    font-family: 'Handlee';
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 43px;
-    letter-spacing: 0em;
-    text-align: center;
-  
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  #htmlTable {
-    color: #272932;
-    background-color: #FCC875;
-    font-size: 28px;
-  }
-
-  #cantidad>i{
-    margin-right: 10px;
-  }
-  
-  #cantidad>label{
-    margin-right: 10px;
-  }
-
-  .fa-solid, .fas {
-    margin-top: 5rem;
-    padding: .3rem;
-    background-color: #FCC875!important;
-    color: #272932;
-    border-radius: 30%;
-  } 
-
-  .fa-solid:hover{
-    transform: scale(1.2, 1.2);
-  }
-
-  #numPrecio{
-    font-family: "Lato";
-    font-weight: 300;
-    margin-top: 5rem;
-  }
-
-  #numTotal{
-    font-family: "Lato";
-    font-weight: 300;
-    margin-top: 5rem;
-  }
-
-  label{
-    font-family: "Lato";
-    font-weight: 300;  font-family: "Lato";
-    font-weight: 300;
-    color: #fff;
-  }
-
-  img {
-    display: flex;
-    align-items: center;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 10%;
-    margin-left: 3rem;
-    margin-top: 1rem;
+  /*Estilo del cuerpo */
+  background-image: url(/src/imgfondos/fondologin.jpg);
+  background-size: cover;
+background-attachment: fixed;
+position: relative;
 }
 
-img:hover {
-  transform: scale(1.1, 1.1);
+.tituloLogin {
+  /*Estilo del titulo "Contacto"*/
+  margin: 0 0 30px;
+  padding: 0;
+  color: #135B11;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: 'Fredoka';
+  font-style: bold;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+ 
 }
 
-#nombreProducto{
-  margin-left: 3rem;
-  margin-bottom: 1rem;
+.login-box {
+  /*Caja del formato  */
+  width: 100%;
+  padding: 40px;
+  background: #272932;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 10px;
+  margin-bottom:  90%;
 }
 
-th{
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  /*Estilo del texto dentro del formulario(Datos a llenar) */
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
   color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 3px solid #FCC875;
+  outline: none;
+  background: transparent;
+  font-family: 'Handlee';
+  letter-spacing: 0em;
+
+
+}
+
+.login-box .user-box label {
+  /*Estilo del texto que aparece en el formulario(Nombre,correo,numero) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+
+  font-family: 'Handlee';
+  letter-spacing: 0em;
+  text-align: center;
+
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  /*Estilo del texto que se hace pequeño */
+  top: -20px;
+  left: 0;
+  color: #FCC875;
+  font-size: 12px;
+  font-family: 'Handlee';
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.login-box a {
+  /*Estilo del boton  */
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #FCC875;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 10px;
+  letter-spacing: 4px;
+  font-family: 'Handlee';
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/*Palabra que contiene el botón*/
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+/*A partir de aquí se anima el botón con la línea*/
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FCC875);
+  animation: btn-anim1 1s linear infinite;
+}
+
+/*Lista de errores que muestra el alert al enviar formulario*/
+.listaDeErrores {
+  list-style-type: none;
+}
+
+/*Botón del alert insertado con sweet alert2*/
+.swal2-styled.swal2-confirm {
+  border-radius: .25em;
+  background: initial;
+  background-color: #FCC875 !important;
+  color: #fff;
+  font-size: 1em;
+}
+
+/*Título del botón del alert insertado con sweet alert2*/
+#swal2-title {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: .8em 1em 0;
+  color: inherit;
+  font-size: 1.875em;
+  font-family: 'Handlee' !important;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
+}
+
+.h2Texto {
+  /*Estilo del texto "H2 "*/
+  margin: 0 0 30px;
+  padding: 0;
+  color: white;
+  font-family: 'Handlee';
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #htmlTable {
-  color: #272932;
-  background-color: #272932;
+  color: #ffffff;
+  background-color: #FCC875;
   font-size: 28px;
 }
 
+
+
+
+
+
+.fa-solid, .fas {
+  padding: 0;
+  background-color: #FCC875!important;
+  color: #272932;
+  border-radius: 30%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+} 
+
+.fa-solid:hover{
+  transform: scale(1.2, 1.2);
+}
+
+
+#numTotal{
+  font-family: "Lato";
+  font-weight: 300;
+  margin-top: 5rem;
+}
+
+label{
+  padding: 0%;
+  font-family: "Lato";
+  
+  font-weight: 300;
+  color: #fff;
+}
+#imagencard{
+  display: flex;
+  justify-content: center;
+}
+#completo{
+  display: flex;
+  flex-wrap: nowrap;
+}
+img {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 10rem;
+  border-radius: 10%;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+p{
+color: #fff;
+}
+
+img:hover {
+transform: scale(1.1, 1.1);
+}
+
+#nombreProducto{
+margin-left: 3rem;
+margin-bottom: 1rem;
+}
+
+
+
+#htmlTable {  /*Es la tabla de atras */
+color: #272932;
+background-color: #272932;
+
+}
+
 #tituloProducto{
-  position: relative;
-  left: 4.5rem;
+position: relative;
+left: 4.5rem;
 }
 
 #btnClear{
-  border: 1px solid #FCC875;
+border: 1px solid #FCC875;
 }
 #btnClear:hover {
-  transform: scale(1.2, 1.2);
+transform: scale(1.2, 1.2);
 }
 
 #btnBuy{
-  border: 1px solid #FCC875;
+border: 1px solid #FCC875;
 }
 #btnBuy:hover {
-  transform: scale(1.2, 1.2);
+transform: scale(1.2, 1.2);
+}
+#nombreProducto{
+color: #fff;
+margin-top: 3rem;
+}
+.card-buttons{
+display: flex;
+flex-wrap: nowrap;
+width: auto;
+height: 1rem;
+
+}
+.card-content{
+display: grid;
+align-items: center;
+margin-left: 30%;
 }
 
-#divItems{
-  display: flex;
-  width: ;
-}
-
-
-
-
-.container {
-  width: 100%;
-  overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
-}
-
-table {
-  width: 100%;
-}
 
 @media screen and (max-width: 1024px) { /* Ajusta los estilos para pantallas más pequeñas */
-  table {
-    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
-    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
-  }
 
-  th, td {
-    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
-  }
+#completo{
+  
+  display: flex; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
+flex-wrap: wrap;
 }
-
+#imagencard{
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+img{
+  margin-left: 6rem;
+}
+}
 @media screen and (max-width: 768px) { /* Ajusta los estilos para pantallas más pequeñas */
-  table {
-    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
-    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
-  }
-
-  th, td {
-    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
-  }
+#imagencard{
+  margin-left: 0rem;
+}
 }
 
 @media screen and (max-width: 425px) { /* Ajusta los estilos para pantallas más pequeñas */
-  table {
-    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
-    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
-  }
 
-  th, td {
-    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
-  }
 }
 
 @media screen and (max-width: 320px) { /* Ajusta los estilos para pantallas más pequeñas */
-  table {
-    display: block; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
-    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
-  }
-
-  th, td {
-    display: block; /* Cambia el comportamiento de las celdas a bloque para que se apilen verticalmente */
-  }
+#card{
+  
+  display: flex; /* Cambia el comportamiento de la tabla a bloque para que se ajuste al ancho del contenedor */
+justify-content: right;
+margin-right:1.5rem ;
 }
-
+}
 
 
 
 @keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
+from {
+  margin-left: 100%;
+  width: 300%;
+}
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+to {
+  margin-left: 0%;
+  width: 100%;
+}
 }
