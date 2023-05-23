@@ -15,9 +15,9 @@ import com.generation.burguer.model.dtoProducto;
 public interface ProductoRepository extends JpaRepository<Producto, Long>{
 
 	List<Producto> findByNombre(String nombre);
-	@Query("SELECT new com.generation.burguer.model.dtoProducto (p.id , p.nombre, p.descripcion, p.precio, p.imagen, c.id, c.nombre) FROM Producto p INNER JOIN p.Categoria c")
+	@Query("SELECT new com.generation.burguer.model.dtoProducto (p.id , p.nombre, p.descripcion, p.precio, p.imagen, c.id, c.nombre) FROM Producto p INNER JOIN p.categoria c")
 	List<dtoProducto> findByTables();
-    @Query ("SELECT new com.generation.burguer.model.dtoProducto (p.id , p.nombre, p.descripcion, p.precio, p.imagen, c.id, c.nombre) FROM Producto as p INNER JOIN p.Categoria c WHERE p.id = :IdProducto")
+    @Query ("SELECT new com.generation.burguer.model.dtoProducto (p.id , p.nombre, p.descripcion, p.precio, p.imagen, c.id, c.nombre) FROM Producto as p INNER JOIN p.categoria c WHERE p.id = :IdProducto")
     Optional<dtoProducto> findByData (@Param("IdProducto") Long IdProducto);
     
 }

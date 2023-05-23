@@ -24,9 +24,8 @@ public class Categoria {
 		 @Column(name = "cate_nombre", nullable = false)
 		 private String nombre;
 		
-		 @OneToMany
-		    @JoinColumn(name = "cate_id")
-		    private List<Producto> producto;
+		 @OneToMany(mappedBy = "categoria")
+         private List<Producto> producto;
 		
 
 

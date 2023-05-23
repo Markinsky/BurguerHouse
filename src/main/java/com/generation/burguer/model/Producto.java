@@ -31,76 +31,75 @@ import javax.persistence.Table;
 		 
 		 @ManyToOne
 		    @JoinColumn(name = "cate_id", nullable = false)
-		    private Categoria Categoria;
+		    private Categoria categoria;
 
-public Producto(Long id, String nombre, String descripcion, double precio, String imagen,
-				com.generation.burguer.model.Categoria categoria) {
+		public Producto(Long id, String nombre, String descripcion, double precio, String imagen, Categoria categoria) {
 			super();
 			this.id = id;
 			this.nombre = nombre;
 			this.descripcion = descripcion;
 			this.precio = precio;
 			this.imagen = imagen;
-			Categoria = categoria;
+			this.categoria = categoria;
+		}
+		
+		public Producto() {
+			// TODO Auto-generated constructor stub
 		}
 
-public Producto() {
-	// TODO Auto-generated constructor stub
-}
+		public Long getId() {
+			return id;
+		}
 
-public Categoria getCategoria() {
-	return Categoria;
-}
+		public void setId(Long id) {
+			this.id = id;
+		}
 
-public void setCategoria(Categoria categoria) {
-	Categoria = categoria;
-}
+		public String getNombre() {
+			return nombre;
+		}
 
-public Long getId() {
-	return id;
-}
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
 
-public void setId(Long id) {
-	this.id = id;
-}
+		public String getDescripcion() {
+			return descripcion;
+		}
 
-public String getNombre() {
-	return nombre;
-}
+		public void setDescripcion(String descripcion) {
+			this.descripcion = descripcion;
+		}
 
-public void setNombre(String nombre) {
-	this.nombre = nombre;
-}
+		public double getPrecio() {
+			return precio;
+		}
 
-public String getDescripcion() {
-	return descripcion;
-}
+		public void setPrecio(double precio) {
+			this.precio = precio;
+		}
 
-public void setDescripcion(String descripcion) {
-	this.descripcion = descripcion;
-}
+		public String getImagen() {
+			return imagen;
+		}
 
-public double getPrecio() {
-	return precio;
-}
+		public void setImagen(String imagen) {
+			this.imagen = imagen;
+		}
 
-public void setPrecio(double precio) {
-	this.precio = precio;
-}
+		public Categoria getCategoria() {
+			return categoria;
+		}
 
-public String getImagen() {
-	return imagen;
-}
+		public void setCategoria(Categoria categoria) {
+			this.categoria = categoria;
+		}
 
-public void setImagen(String imagen) {
-	this.imagen = imagen;
-}
-
-@Override
-public String toString() {
-	return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", precio=" + precio
-			+ ", imagen=" + imagen + "]";
-}
+		@Override
+		public String toString() {
+			return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", precio=" + precio
+					+ ", imagen=" + imagen + ", categoria=" + categoria + "]";
+		}
 
  
 }

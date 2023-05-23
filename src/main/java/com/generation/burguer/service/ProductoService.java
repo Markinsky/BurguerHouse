@@ -43,7 +43,7 @@ public Producto addProducto(Producto producto) {
 	Producto tmp =null;
 	System.out.println(producto+"PRODUCTO");
 		tmp = productoRepository.save(producto);
-		return producto;
+		return tmp;
 		}
 
 public Producto updateProducto(Long id, Producto producto) {
