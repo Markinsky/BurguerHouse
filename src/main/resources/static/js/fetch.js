@@ -25,56 +25,56 @@ function addItems(div_Productos) {
                 switch (p.cate_nombre) {
       case "Hamburguesas":
         hmtlHamburguesas += `<div class="card">
-               <img src="${p.img}" class="card-img-top" alt="...">
+               <img src="${p.imagen}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${p.nombre}</strong></h5>
-                 <p class="card-description">${p.descripción}</p>
+                 <p class="card-description">${p.descripcion}</p>
                  <p class="card-text"><strong>$ ${p.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.img}'})" href="#" class="btn btn-primary">Agregar</a>
+                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.imagen}'})" href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
       case "Postre":
         htmlPostres += `<div class="card">
-           <img src="${p.img}" class="card-img-top" alt="...">
+           <img src="${p.imagen}" class="card-img-top" alt="...">
            <div class="card-body">
              <h5 class="card-title"><strong>${p.nombre}</strong></h5>
-             <p class="card-description">${p.descripción}</p>
+             <p class="card-description">${p.descripcion}</p>
              <p class="card-text"><strong>$ ${p.precio}</strong></p>
-             <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.img}'})" href="#" class="btn btn-primary">Agregar</a>
+             <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.imagen}'})" href="#" class="btn btn-primary">Agregar</a>
            </div>
          </div>`;
         break;
       case "Bebidas":
         htmlBebidas += `<div class="card">
-               <img src="${p.img}" class="card-img-top" alt="...">
+               <img src="${p.imagen}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${p.nombre}</strong></h5>
-                 <p class="card-description">${p.descripción}</p>
+                 <p class="card-description">${p.descripcion}</p>
                  <p class="card-text"><strong>$ ${p.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.img}'})" href="#" class="btn btn-primary">Agregar</a>
+                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.imagen}'})" href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
       case "Complementos":
         htmlComplementos += `<div class="card">
-               <img src="${p.img}" class="card-img-top" alt="...">
+               <img src="${p.imagen}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${p.nombre}</strong></h5>
-                 <p class="card-description">${p.descripción}</p>
+                 <p class="card-description">${p.descripcion}</p>
                  <p class="card-text"><strong>$ ${p.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.img}'})" href="#" class="btn btn-primary">Agregar</a>
+                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.imagen}'})" href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
       case "Bebidas alcohólicas":
         htmlAlcohol += `<div class="card">
-               <img src="${p.img}" class="card-img-top" alt="...">
+               <img src="${p.imagen}" class="card-img-top" alt="...">
                <div class="card-body">
                  <h5 class="card-title"><strong>${p.nombre}</strong></h5>
-                 <p class="card-description">${p.descripción}</p>
+                 <p class="card-description">${p.descripcion}</p>
                  <p class="card-text"><strong>$ ${p.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.img}'})" href="#" class="btn btn-primary">Agregar</a>
+                 <a onclick="addItem({nombre: '${p.nombre}', precio:${p.precio}, imagen: '${p.imagen}'})" href="#" class="btn btn-primary">Agregar</a>
                </div>
              </div>`;
         break;
