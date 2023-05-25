@@ -80,15 +80,15 @@ function addItems(div_Productos) {
         break;
     }
             }); // foreach
+            divHamburguesas.insertAdjacentHTML("afterbegin", hmtlHamburguesas);
+         divPostres.insertAdjacentHTML("afterbegin", htmlPostres);
+         divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
+         divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
+         divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
         });//then
     }).catch(function(err) {
         console.log(err);
     });
-     divHamburguesas.insertAdjacentHTML("afterbegin", hmtlHamburguesas);
-  divPostres.insertAdjacentHTML("afterbegin", htmlPostres);
-  divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
-  divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
-  divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
 }// addItems
 
 window.addEventListener("load", function (){
