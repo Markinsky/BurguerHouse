@@ -1,3 +1,10 @@
+#divItems {
+  color: #ffffff;
+  text-align: center;
+
+  font-size: x-large;
+}
+
 body {
   /*Estilo del cuerpo */
   background-image: url(/src/imgfondos/fondologin.jpg);

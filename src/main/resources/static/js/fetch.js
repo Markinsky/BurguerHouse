@@ -34,7 +34,7 @@ function addItems(div_Productos) {
                </div>
              </div>`;
         break;
-      case "Postre":
+      case "postre":
         htmlPostres += `<div class="card">
            <img src="${p.imagen}" class="card-img-top" alt="...">
            <div class="card-body">
@@ -96,7 +96,7 @@ window.addEventListener("load", function (){
    
 });
 
-/*
+
 function addItem(jsonBurguer){
   let itemStorage = JSON.parse(localStorage.getItem("jsonCarrito"));
   if (itemStorage==null) {
@@ -116,80 +116,3 @@ function addItem(jsonBurguer){
   }
 
 }
-
-window.addEventListener("load", function (event) {
-  let retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
-  if (retSessionMenu == null ) {
-    localStorage.setItem('jsonNuevoProducto', JSON.stringify(jsonMenu));
-    retSessionMenu = JSON.parse(localStorage.getItem("jsonNuevoProducto"));
-  }
-    console.log(retSessionMenu);
-
-  event.preventDefault();
-
-  retSessionMenu.forEach(burguer => {
-    switch (burguer.categoría) {
-      case "Hamburguesas":
-        hmtlHamburguesas += `<div class="card">
-               <img src="${burguer.img}" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
-                 <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${burguer.nombre}', precio:${burguer.precio}, imagen: '${burguer.img}'})" href="#" class="btn btn-primary">Agregar</a>
-               </div>
-             </div>`;
-        break;
-      case "Postre":
-        htmlPostres += `<div class="card">
-           <img src="${burguer.img}" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
-             <p class="card-description">${burguer.descripción}</p>
-             <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
-             <a onclick="addItem({nombre: '${burguer.nombre}', precio:${burguer.precio}, imagen: '${burguer.img}'})" href="#" class="btn btn-primary">Agregar</a>
-           </div>
-         </div>`;
-        break;
-      case "Bebidas":
-        htmlBebidas += `<div class="card">
-               <img src="${burguer.img}" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
-                 <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${burguer.nombre}', precio:${burguer.precio}, imagen: '${burguer.img}'})" href="#" class="btn btn-primary">Agregar</a>
-               </div>
-             </div>`;
-        break;
-      case "Complementos":
-        htmlComplementos += `<div class="card">
-               <img src="${burguer.img}" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
-                 <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${burguer.nombre}', precio:${burguer.precio}, imagen: '${burguer.img}'})" href="#" class="btn btn-primary">Agregar</a>
-               </div>
-             </div>`;
-        break;
-      case "Bebidas alcohólicas":
-        htmlAlcohol += `<div class="card">
-               <img src="${burguer.img}" class="card-img-top" alt="...">
-               <div class="card-body">
-                 <h5 class="card-title"><strong>${burguer.nombre}</strong></h5>
-                 <p class="card-description">${burguer.descripción}</p>
-                 <p class="card-text"><strong>$ ${burguer.precio}</strong></p>
-                 <a onclick="addItem({nombre: '${burguer.nombre}', precio:${burguer.precio}, imagen: '${burguer.img}'})" href="#" class="btn btn-primary">Agregar</a>
-               </div>
-             </div>`;
-        break;
-    }
-  });
-  divHamburguesas.insertAdjacentHTML("afterbegin", hmtlHamburguesas);
-  divPostres.insertAdjacentHTML("afterbegin", htmlPostres);
-  divBebidas.insertAdjacentHTML("afterbegin", htmlBebidas);
-  divComplementos.insertAdjacentHTML("afterbegin", htmlComplementos);
-  divAlcohol.insertAdjacentHTML("afterbegin", htmlAlcohol);
-
-});*/
