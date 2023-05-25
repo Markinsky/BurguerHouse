@@ -241,7 +241,7 @@ window.addEventListener("load", function (event) {
                </div>
              </div>`;
         break;
-      case "Postre":
+      case "postres":
         htmlPostres += `<div class="card">
            <img src="${burguer.img}" class="card-img-top" alt="...">
            <div class="card-body">

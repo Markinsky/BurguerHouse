@@ -34,7 +34,7 @@ function addItems(div_Productos) {
                </div>
              </div>`;
         break;
-      case "postre":
+      case "postres":
         htmlPostres += `<div class="card">
            <img src="${p.imagen}" class="card-img-top" alt="...">
            <div class="card-body">
