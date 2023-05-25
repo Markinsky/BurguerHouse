@@ -1,4 +1,5 @@
 let divItems=document.getElementById("divItems");
+let btnClear = document.getElementById("btnClear")
 let hmtlCarrito="";
 var mapCarrito = new Map();
 
@@ -10,16 +11,15 @@ window.addEventListener("load",function(event) {
     
 })
  function mostrar() {
+  divItems.innerHTML = "";
   let carrito = JSON.parse(localStorage.getItem("jsonCarrito"))
   if (Object.keys(carrito).length === 0) {
     divItems.innerHTML = "";
-    hmtlCarrito = "Aún no has agregado nada a tu carrito";
+    hmtlCarrito= "Aún no has agregado nada a tu carrito</span>";
     divItems.insertAdjacentHTML("afterbegin",hmtlCarrito)
-    
   }else{
     let syntxCarrito = "";
     let cont = 1;
-   
     let sumaTotal = 0;
 
     // Paso 1: contar objetos repetidos
@@ -32,13 +32,11 @@ carrito.forEach((obj) => {
     contObj[key] = 1;
   }
 });
-
 // Paso 2: agregar el campo "cont" a cada objeto
 carrito.forEach((obj) => {
   let key = obj.nombre + obj.precio + obj.imagen;
   obj.cont = contObj[key];
 });
-
 // Paso 3: crear un nuevo array con objetos únicos
 let uniqueArray = [];
 let uniqueObj = {};
@@ -49,24 +47,31 @@ carrito.forEach((obj) => {
     uniqueObj[key] = true;
   }
 });
-
      uniqueArray.forEach(car =>{
      let total = car.cont *car.precio;
      sumaTotal += total;
-     console.log("Total "+ total)
-     console.log("sumaTotal "+ sumaTotal);
-     syntxCarrito = `<tr>
-                      <td><img src="${car.imagen}"> <label id="nombreProducto"> ${car.nombre}</label></td> 
-                      <td id="cantidad"><i onclick="agregar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-plus "></i><label>${car.cont}</label><i onclick="eliminar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-minus"></i></td>
-                      <td><label id="numPrecio">$ ${car.precio}</label></td>
-                      <td><label id="numTotal">$ ${total}</label></td>
-                      </tr>
+     syntxCarrito = `<div id="card">
+                        <h3 id="nombreProducto">${car.nombre}</h3>
+                        <div id="completo">
+                         <div id="imagencard">
+                           <img src="${car.imagen}" alt="${car.nombre}">
+                           </div>
+                         <div class="card-content">
+                         <p>Precio: $ ${car.precio}</p>
+                         <p>Total: $ ${total}</p>
+                         <div class="card-buttons">
+                         <p>Cantidad: 
+                           <i onclick="agregar('${car.nombre}', '${car.imagen}', ${car.precio})" class="fa-solid fa-plus"></i>${car.cont}
+                           <i onclick="eliminar('${car.nombre}')" class="fa-solid fa-minus"></i></p>
+                           </div>
+                         </div>
+                         </div>
+                      </div>
                       `;
     mapCarrito.set(car.nombre, syntxCarrito);
     cont = 1;
     total = 0;    
     });
-    divItems.innerHTML = "";
     divItems.insertAdjacentHTML("afterbegin",almacenamiento(sumaTotal));
   }
  }
@@ -80,20 +85,15 @@ function agregar(nombreMap, imagenMap, precioMap){
   }
   localCarrito.push(newData);
   localStorage.setItem("jsonCarrito", JSON.stringify(localCarrito));
-  mostrar();
+  location.reload();
 }
 
-function eliminar( nombreMap, imagenMap, precioMap){
+function eliminar(nombreMap){
   let localCarrito = JSON.parse(localStorage.getItem("jsonCarrito"));
-  let dropData = {
-    nombre: nombreMap,
-    precio: precioMap,
-    imagen: imagenMap
-  }
-  let index = localCarrito.indexOf(dropData);
+  let index = localCarrito.findIndex(carr => carr.nombre === nombreMap);
   localCarrito.splice(index, 1);
   localStorage.setItem("jsonCarrito", JSON.stringify(localCarrito));
-  mostrar();
+  location.reload();
 }
 
  function almacenamiento(sumaTotal) {
@@ -105,16 +105,19 @@ function eliminar( nombreMap, imagenMap, precioMap){
 
   let htmlTable = `<table id="htmlTable" class="table">
   <tr>
-    <th scope="col" id="tituloProducto">Producto</th>
-    <th scope="col">Cantidad</th>
-    <th scope="col">Precio</th>
-    <th scope="col">Total</th>
+    <th scope="col">Producto</th>
   </tr>
   ${hmtlCarrito}
   <tr>
-  <td><label>Total del carrito $ ${sumaTotal}</label></td>
+  <td><label> <strong> Total del carrito $ ${sumaTotal}</strong></label></td>
   </tr>
   </table>`;
 
   return htmlTable;
  }
+
+ btnClear.addEventListener("click" , function(){
+
+  localStorage.setItem("jsonCarrito", "[]");
+  location.reload();
+ });
